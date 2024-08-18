@@ -14,7 +14,7 @@ public class App {
     }
 
     public static Estudiante creacionEstudiante() {
-        Estudiante pepito = new Estudiante("Pepito", "lopez", "109234", "58534721", (byte) 4);
+        Estudiante pepito = new Estudiante("Pepito", "lopez", "109234", "58534721", "pepito@gmail.com" ,(byte) 4);
         return pepito;
     }
 
@@ -23,10 +23,11 @@ public class App {
         String apellido = pepito.getApellido();
         String id = pepito.getId();
         String telefono = pepito.getTelefono();
+        String correo=pepito.getCorreo();
         byte edad = pepito.getEdad();
 
         String mensaje = "Se ha creado el estudiante " + nombre + " " + apellido + " con id: " + id + " con telefono: "
-                + telefono + " y edad: " + edad;
+                + telefono + " correo: "+ correo +  " y edad: " + edad;
         return mensaje;
     }
 
