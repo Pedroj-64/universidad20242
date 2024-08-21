@@ -4,7 +4,15 @@ public class Estudiante {
 
     String id, nombre, apellido, telefono, correo;
     byte edad;
-
+    /**
+     * Metodo constructor de la clase estudiante
+     * @param nombre
+     * @param apellido
+     * @param id
+     * @param telefono
+     * @param correo
+     * @param edad
+     */
     public Estudiante(String nombre, String apellido, String id, String telefono, String correo, byte edad) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -14,7 +22,10 @@ public class Estudiante {
         this.edad = edad;
 
     }
-
+    /**
+     * De aqui a abajo hay metodod getters y setters para recuperar info de Estudiante
+     * @return
+     */
     public String getCorreo() {
         return correo;
     }
