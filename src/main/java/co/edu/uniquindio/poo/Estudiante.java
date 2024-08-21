@@ -3,9 +3,15 @@ package co.edu.uniquindio.poo;
 public class Estudiante {
 
     String id, nombre, apellido, telefono, correo;
+    double nota1, nota2, nota3;
     byte edad;
+
     /**
      * Metodo constructor de la clase estudiante
+     * Importante info para aprender=los "this.nombreDeVariable=NombreDeVariable es
+     * una representacion de que se va utilizar las variables creadas con el
+     * constructor en algun lado y no los valores inicilizados (si los hay)"
+     * 
      * @param nombre
      * @param apellido
      * @param id
@@ -13,19 +19,51 @@ public class Estudiante {
      * @param correo
      * @param edad
      */
-    public Estudiante(String nombre, String apellido, String id, String telefono, String correo, byte edad) {
+    public Estudiante(String nombre, String apellido, String id, String telefono, String correo, byte edad, double nota1,
+            double nota2, double nota3) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.id = id;
         this.telefono = telefono;
         this.correo = correo;
         this.edad = edad;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
 
     }
+
     /**
-     * De aqui a abajo hay metodod getters y setters para recuperar info de Estudiante
+     * De aqui a abajo hay metodod getters y setters para recuperar info de
+     * Estudiante
+     * 
      * @return
      */
+
+    public double getNota1() {
+        return nota1;
+    }
+
+    public double getNota2() {
+        return nota2;
+    }
+
+    public double getNota3() {
+        return nota3;
+    }
+
+    public void setNota1(double nota1) {
+        this.nota1 = nota1;
+    }
+
+    public void setNota2(double nota2) {
+        this.nota2 = nota2;
+    }
+
+    public void setNota3(double nota3) {
+        this.nota3 = nota3;
+    }
+
     public String getCorreo() {
         return correo;
     }
@@ -74,4 +112,8 @@ public class Estudiante {
         this.edad = edad;
     }
 
+    public String toString(){
+        return "Se ha creado el estudiante " + nombre + " " + apellido + " con id: " + id + " con telefono: "
+                + telefono + " correo: "+ correo +  " y edad: " + edad +" y su promedio academico es: " ;
+    }
 }

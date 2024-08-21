@@ -10,9 +10,9 @@ public class App {
      * @param args
      */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
         Estudiante pepito=creacionEstudiante();
-        String mensaje = generarMensaje(pepito);
+        double promedio=calcPromedio(pepito);
+        String mensaje = generarMensaje(pepito,promedio);
         mostrarMensaje(mensaje);
 
     }
@@ -21,7 +21,7 @@ public class App {
      * @return
      */
     public static Estudiante creacionEstudiante() {
-        Estudiante pepito = new Estudiante("Pepito", "lopez", "109234", "58534721", "pepito@gmail.com" ,(byte) 4);
+        Estudiante pepito = new Estudiante("Pepito", "lopez", "109234", "58534721", "pepito@gmail.com" ,(byte) 4,3,2,5);
         return pepito;
     }
     /**
@@ -29,22 +29,24 @@ public class App {
      * @param pepito
      * @return
      */
-    public static String generarMensaje(Estudiante pepito) {
-        String nombre = pepito.getNombre();
-        String apellido = pepito.getApellido();
-        String id = pepito.getId();
-        String telefono = pepito.getTelefono();
-        String correo=pepito.getCorreo();
-        byte edad = pepito.getEdad();
+    public static String generarMensaje(Estudiante pepito, double promedio) {
 
-        String mensaje = "Se ha creado el estudiante " + nombre + " " + apellido + " con id: " + id + " con telefono: "
-                + telefono + " correo: "+ correo +  " y edad: " + edad;
+        String mensaje = pepito.toString() + promedio;
         return mensaje;
+    }
+
+    public static double calcPromedio(Estudiante pepito){
+        double nota1=pepito.getNota1();
+        double nota2=pepito.getNota2();
+        double nota3=pepito.getNota3();
+        double promedio=(nota1+nota2+nota3)/3.0;
+        return promedio;
     }
     /**
      * Metodo para mostrar el mensaje final
      * @param mensaje
      */
+
     public static void mostrarMensaje(String mensaje){
         System.out.println(mensaje);
     }
