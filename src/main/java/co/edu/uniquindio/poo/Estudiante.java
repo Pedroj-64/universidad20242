@@ -111,7 +111,9 @@ public class Estudiante {
     public void setEdad(byte edad) {
         this.edad = edad;
     }
-
+    /**
+     * Metodo toString el cual sirve  para dale formato de salida a alguna clase
+     */
     public String toString(){
         return "Se ha creado el estudiante " + nombre + " " + apellido + " con id: " + id + " con telefono: "
                 + telefono + " correo: "+ correo +  " y edad: " + edad +" y su promedio academico es: " ;

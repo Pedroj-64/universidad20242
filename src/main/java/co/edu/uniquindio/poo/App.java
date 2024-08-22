@@ -24,6 +24,18 @@ public class App {
         Estudiante pepito = new Estudiante("Pepito", "lopez", "109234", "58534721", "pepito@gmail.com" ,(byte) 4,3,2,5);
         return pepito;
     }
+   /**
+    * Metodo que calcula el promedio de estudiante para poder calcatenar en el mensaje final
+    * @param pepito
+    * @return
+    */
+    public static double calcPromedio(Estudiante pepito){
+        double nota1=pepito.getNota1();
+        double nota2=pepito.getNota2();
+        double nota3=pepito.getNota3();
+        double promedio=(nota1+nota2+nota3)/3.0;
+        return promedio;
+    } 
     /**
      * Metodo para generar un mensaje a partir de la creacion del Estudiante, utilizando getters
      * @param pepito
@@ -33,14 +45,6 @@ public class App {
 
         String mensaje = pepito.toString() + promedio;
         return mensaje;
-    }
-
-    public static double calcPromedio(Estudiante pepito){
-        double nota1=pepito.getNota1();
-        double nota2=pepito.getNota2();
-        double nota3=pepito.getNota3();
-        double promedio=(nota1+nota2+nota3)/3.0;
-        return promedio;
     }
     /**
      * Metodo para mostrar el mensaje final
