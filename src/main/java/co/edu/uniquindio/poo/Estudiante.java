@@ -19,7 +19,8 @@ public class Estudiante {
      * @param correo
      * @param edad
      */
-    public Estudiante(String nombre, String apellido, String id, String telefono, String correo, byte edad, double nota1,
+    public Estudiante(String nombre, String apellido, String id, String telefono, String correo, byte edad,
+            double nota1,
             double nota2, double nota3) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -30,7 +31,7 @@ public class Estudiante {
         this.nota1 = nota1;
         this.nota2 = nota2;
         this.nota3 = nota3;
-
+        assert nota1<5.0;
     }
 
     /**
@@ -111,11 +112,19 @@ public class Estudiante {
     public void setEdad(byte edad) {
         this.edad = edad;
     }
+
+    public static double promedioNotas(double nota1, double nota2, double nota3) {
+        return (nota1 + nota2 + nota3) / 3;
+    }
+
+
+
     /**
-     * Metodo toString el cual sirve  para dale formato de salida a alguna clase
+     * Metodo toString el cual sirve para dale formato de salida a alguna clase
      */
-    public String toString(){
+    public String toString() {
         return "Se ha creado el estudiante " + nombre + " " + apellido + " con id: " + id + " con telefono: "
-                + telefono + " correo: "+ correo +  " y edad: " + edad +" y su promedio academico es: " ;
+                + telefono + " correo: " + correo + " y edad: " + edad + " sus notas son:" + nota1 + ", " + nota2 + ", "
+                + nota3 + ", " + " y su promedio academico es: " + promedioNotas(nota1, nota2, nota3);
     }
 }
