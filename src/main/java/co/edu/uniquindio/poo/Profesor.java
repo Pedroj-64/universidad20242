@@ -35,6 +35,11 @@ public class Profesor {
         this.cedula = cedula;
     }
 
+    @Override
+    public String toString() {
+        return "Profesor [nombre=" + nombre + ", cedula=" + cedula + ", puesto=" + puesto + "]";
+    }
+
 
 
 }

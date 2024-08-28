@@ -24,6 +24,7 @@ public class App {
         Estudiante pepito = new Estudiante("Pepito", "lopez", "109234", "58534721", "pepito@gmail.com" ,(byte) 4,7,8,5);
         return pepito;
     }
+    
     /**
      * Metodo para comprobar notas en el mismo se genera el mensaje para poderlo imprimir en el proximo metodo
      * @param pepito

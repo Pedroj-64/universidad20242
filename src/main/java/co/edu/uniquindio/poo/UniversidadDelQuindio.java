@@ -14,4 +14,9 @@ public class UniversidadDelQuindio {
         return programa;
     }
 
+    @Override
+    public String toString() {
+        return "Universidad Del Quindio [programa=" + programa + "]";
+    }
+
 }

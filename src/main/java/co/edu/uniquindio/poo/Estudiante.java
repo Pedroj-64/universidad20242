@@ -2,7 +2,7 @@ package co.edu.uniquindio.poo;
 
 public class Estudiante {
 
-    String id, nombre, apellido, telefono, correo;
+    String id, nombre, apellido, telefono, correo,cedula;
     double nota1, nota2, nota3;
     byte edad;
 
@@ -40,7 +40,12 @@ public class Estudiante {
      * 
      * @return
      */
-
+    public String getCedula(){
+        return cedula;
+    }
+    public void setCedula(String cedula){
+        this.cedula=cedula;
+    }
     public double getNota1() {
         return nota1;
     }
