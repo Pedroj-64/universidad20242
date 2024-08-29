@@ -16,18 +16,35 @@ public class App {
         mostrarMensaje(mensaje);
 
     }
+    /**
+     * Metodo para la creacion del profesor a partir del constructor del mismo
+     * @return
+     */
     public static Profesor creacionProfesor(){
         Profesor esteban=new Profesor("Esteban", "405689203", Categoria.AUXILIAR);
         return esteban;
     }
+    /**
+     * Metodo para la creacion del curso a partir del constructor del mismo, utilizando el nombre del profesor asignado en este caso esteban ( por ello se getea al final)
+     * @param esteban
+     * @return
+     */
     public static Curso creacionDeCurso(Profesor esteban){
         Curso curso1=new Curso("Programacion I", 5, esteban.getNombre());
         return curso1;
     }
+    /**
+     * Metodo para la creacion del Programa academico a partir del constructor del mismo
+     * @return
+     */
     public static ProgramaAcademico creacionDeProgramaAcademico(){
         ProgramaAcademico programa=new ProgramaAcademico("ing de sistemas y computacion");
         return programa;
     }
+    /**
+     * Metodo para la creacion de la universidad  a partir del constructor del mismo
+     * @return
+     */
     public static UniversidadDelQuindio creacionUnivesidad(){
         UniversidadDelQuindio universidad=new UniversidadDelQuindio(null, null);
         return universidad;
