@@ -117,7 +117,13 @@ public class Estudiante {
     public void setEdad(byte edad) {
         this.edad = edad;
     }
-
+    /**
+     * Metodo para calcular el promedio de las notas del estudiante introducidas en el contructor
+     * @param nota1
+     * @param nota2
+     * @param nota3
+     * @return
+     */
     public static double promedioNotas(double nota1, double nota2, double nota3) {
         return (nota1 + nota2 + nota3) / 3;
     }

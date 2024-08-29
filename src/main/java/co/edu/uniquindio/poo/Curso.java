@@ -23,14 +23,14 @@ public class Curso {
         estudiantes = new LinkedList<>();
     }
     
-    
+    /**
+     * Metodos setter && getter del codigo
+     * @return
+     */
     public String getNombreProfesor() {
         return nombreProfesor;
     }
-    /**
-     * 
-     * @param profesor
-     */
+
     public void setNombreProfesor(String nombreProfesor) {
         this.nombreProfesor = nombreProfesor;
     }
@@ -58,7 +58,11 @@ public class Curso {
     public int getNotaDef() {
         return notaDef;
     }
-
+    /**
+     * Este metodo lo que hace es verificar a base de una cedula de un estudiante listado si el mismo se encuentra o no en la lista
+     * @param estudiantes
+     * @return
+     */
     public static boolean verificarEstudiante(Collection<Estudiante> estudiantes) {
         Scanner entrada = new Scanner(System.in);
         boolean banderilla = false;
@@ -75,17 +79,26 @@ public class Curso {
         entrada.close();
         return banderilla;
     }
-
+    /**
+     * Metodo toString para mejor presentacion
+     */
     @Override
     public String toString() {
         return "Curso [nombre=" + nombre + ", profesor=" + nombreProfesor + ", notaDef=" + notaDef + ", estudiantes="
                 + estudiantes + "]";
     }
-
+    /**
+     * Metodo para agregar estudiantes a la coleccion 
+     * @param estudiante
+     * @param estudiantes
+     */
     public static void agregarEstudiante(Estudiante estudiante, Collection<Estudiante> estudiantes) {
         estudiantes.add(estudiante);
     }
-
+    /**
+     * Metodo para a base de la cedula eliminar al estudiante encontrado en la lista
+     * @param estudiantes
+     */
     public static void eliminarEstudiante(Collection<Estudiante> estudiantes) {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Por favor introduzca la cedula del estudiante que quiere elimina ");
