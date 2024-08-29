@@ -31,7 +31,9 @@ public class Estudiante {
         this.nota1 = nota1;
         this.nota2 = nota2;
         this.nota3 = nota3;
-        assert nota1<5.0;
+        validarNota(nota1);
+        validarNota(nota2);
+        validarNota(nota3);
     }
 
     /**
@@ -128,7 +130,11 @@ public class Estudiante {
         return (nota1 + nota2 + nota3) / 3;
     }
 
-
+    private static void validarNota(double nota){
+        if(nota<0.0 || nota>5.0){
+            System.out.println("Las notas tienen que estar en un rango de 0.0 a 5.0");
+        }
+    }
 
     /**
      * Metodo toString el cual sirve para dale formato de salida a alguna clase

@@ -9,13 +9,19 @@ public class App {
      * Main
      * @param args
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
         Estudiante pepito=creacionEstudiante();
+        Profesor esteban=creacionProfesor();
+        UniversidadDelQuindio universidad=creacionUnivesidad();
+        ProgramaAcademico programa=creacionDeProgramaAcademico();
+        Curso curso=creacionDeCurso(esteban);
         pepito.setNombre("Mateus");  //Metodo que cambia el nombre del estudiante antes de printearlo
-        String mensaje=comprobarNotas(pepito);
+        String mensaje=generarMensaje(universidad, esteban, programa, curso, pepito);
         mostrarMensaje(mensaje);
 
     }
+
+
     /**
      * Metodo para la creacion del profesor a partir del constructor del mismo
      * @return
@@ -57,26 +63,9 @@ public class App {
         Estudiante pepito = new Estudiante("Pepito", "lopez", "109234", "58534721", "pepito@gmail.com" ,(byte) 4,7,8,5);
         return pepito;
     }
-    
-    /**
-     * Metodo para comprobar notas en el mismo se genera el mensaje para poderlo imprimir en el proximo metodo
-     * @param pepito
-     * @return
-     */
-    public static String comprobarNotas(Estudiante pepito) {
-        double nota1=pepito.getNota1();
-        double nota2=pepito.getNota2();
-        double nota3=pepito.getNota3();
-        String mensaje;
-        if (nota1 < 5 && nota2 < 5 && nota3 < 5) {
-            mensaje=("Las notas tienen que estar en el rango de 0.0 a 5.0");
-        } else if (nota1 > 0 && nota2 > 0 && nota3 > 0) {
-            mensaje=("Las notas tienen que estar en el rango de 0.0 a 5.0");
-        }else{
-            mensaje=pepito.toString();
-        }  
+    public static String generarMensaje(UniversidadDelQuindio uni,Profesor profesor,ProgramaAcademico pAcademico, Curso curso, Estudiante estudiante){
+        String mensaje=(uni.toString()+profesor.toString()+pAcademico.toString()+curso.toString()+estudiante.toString());
         return mensaje;
-        
     }
     /**
      * Metodo para mostrar el mensaje final
