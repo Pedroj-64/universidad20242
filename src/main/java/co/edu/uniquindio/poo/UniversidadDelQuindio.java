@@ -1,15 +1,15 @@
 package co.edu.uniquindio.poo;
 
 public class UniversidadDelQuindio {
-    private ProgramaAcademico programa;
-    private Curso curso;
+    private String programa;
+    private String curso;
     
     /**
      * Constructor 
      * @param programa
      * @param curso
      */
-    public UniversidadDelQuindio(ProgramaAcademico programa,Curso curso) {
+    public UniversidadDelQuindio(String programa,String curso) {
         this.programa=programa;
         this.curso=curso;
     }
@@ -17,17 +17,17 @@ public class UniversidadDelQuindio {
      * Metodos setter y getter de aqui a abajo
      * @param curso
      */
-    public void setCurso(Curso curso){
+    public void setCurso(String curso){
         this.curso=curso;
     }
-    public Curso getCurso(){
+    public String getCurso(){
         return curso;
     }
-    public void setPrograma(ProgramaAcademico programa) {
+    public void setPrograma(String programa) {
         this.programa = programa;
     }
 
-    public ProgramaAcademico getPrograma() {
+    public String getPrograma() {
         return programa;
     }
     /**

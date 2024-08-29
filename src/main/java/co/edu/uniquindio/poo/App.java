@@ -12,9 +12,9 @@ public class App {
     public static void main(String[] args) {        
         Estudiante pepito=creacionEstudiante();
         Profesor esteban=creacionProfesor();
-        UniversidadDelQuindio universidad=creacionUnivesidad();
         ProgramaAcademico programa=creacionDeProgramaAcademico();
-        Curso curso=creacionDeCurso(esteban);
+        Curso curso=creacionDeCurso(esteban);       
+         UniversidadDelQuindio universidad=creacionUnivesidad(programa, curso);
         pepito.setNombre("Mateus");  //Metodo que cambia el nombre del estudiante antes de printearlo
         String mensaje=generarMensaje(universidad, esteban, programa, curso, pepito);
         mostrarMensaje(mensaje);
@@ -51,8 +51,8 @@ public class App {
      * Metodo para la creacion de la universidad  a partir del constructor del mismo
      * @return
      */
-    public static UniversidadDelQuindio creacionUnivesidad(){
-        UniversidadDelQuindio universidad=new UniversidadDelQuindio(null, null);
+    public static UniversidadDelQuindio creacionUnivesidad(ProgramaAcademico programa,Curso curso){
+        UniversidadDelQuindio universidad=new UniversidadDelQuindio(programa.getNombre(), curso.getNombre());
         return universidad;
     }
     /**
