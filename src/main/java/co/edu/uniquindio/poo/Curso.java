@@ -92,7 +92,7 @@ public class Curso {
      * @param estudiante
      * @param estudiantes
      */
-    public static void agregarEstudiante(Estudiante estudiante, Collection<Estudiante> estudiantes) {
+    public void agregarEstudiante(Estudiante estudiante) {
         estudiantes.add(estudiante);
     }
     /**

@@ -1,6 +1,8 @@
 package co.edu.uniquindio.poo;
 
 /**
+ * Tarea 1= que el metodo de nota definitiva sea personalizado tipo (la nota del def de estudiante tal es tal)}
+ * 
  * Hello world!
  *
  */
