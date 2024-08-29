@@ -6,29 +6,39 @@ import java.util.Scanner;
 
 public class Curso {
     private String nombre;
-    private Profesor profesor;
+    private String nombreProfesor;
     private int notaDef;
     private Collection<Estudiante> estudiantes;
-
-    public Curso(String nombre, int notaDef, Profesor profesor) {
-        this.profesor = profesor;
+    
+    /**
+     * Metodo constructor de la clase curso
+     * @param nombre
+     * @param notaDef
+     * @param profesor
+     */
+    public Curso(String nombre, int notaDef, String nombreProfesor) {
+        this.nombreProfesor = nombreProfesor;
         this.nombre = nombre;
         this.notaDef = notaDef;
         estudiantes = new LinkedList<>();
     }
-
-    public Profesor getProfesor() {
-        return profesor;
+    
+    
+    public String getNombreProfesor() {
+        return nombreProfesor;
     }
-
-    public void setProfesor(Profesor profesor) {
-        this.profesor = profesor;
+    /**
+     * 
+     * @param profesor
+     */
+    public void setNombreProfesor(String nombreProfesor) {
+        this.nombreProfesor = nombreProfesor;
     }
 
     public Collection<Estudiante> getEstudiantes() {
         return estudiantes;
     }
-
+    
     public void setEstudiantes(Collection<Estudiante> estudiantes) {
         this.estudiantes = estudiantes;
     }
@@ -68,7 +78,7 @@ public class Curso {
 
     @Override
     public String toString() {
-        return "Curso [nombre=" + nombre + ", profesor=" + profesor + ", notaDef=" + notaDef + ", estudiantes="
+        return "Curso [nombre=" + nombre + ", profesor=" + nombreProfesor + ", notaDef=" + notaDef + ", estudiantes="
                 + estudiantes + "]";
     }
 
@@ -89,5 +99,6 @@ public class Curso {
             }
 
         }
+        entrada.close();
     }
 }
