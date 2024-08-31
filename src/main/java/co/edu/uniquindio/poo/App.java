@@ -13,13 +13,14 @@ public class App {
      */
     public static void main(String[] args) {        
         Estudiante pepito = creacionEstudiante();
+        Estudiante laura= creacionEstudiante();
         Profesor esteban = creacionProfesor();
         ProgramaAcademico programa = creacionDeProgramaAcademico();
-        Curso curso = creacionDeCurso(esteban);       
+        Curso curso = creacionDeCurso(esteban);   
+        curso.verificarEstudiante("10294");    
         UniversidadDelQuindio universidad = creacionUnivesidad(programa, curso);
         pepito.setNombre("Mateus");  // Método que cambia el nombre del estudiante antes de imprimirlo
-        String mensaje = generarMensaje(universidad, esteban, programa, curso, pepito);
-        mostrarMensaje(mensaje);
+        mostrarMensaje(curso);
     }
 
 
@@ -38,7 +39,7 @@ public class App {
      * @return
      */
     public static Curso creacionDeCurso(Profesor esteban) {
-        Curso curso1 = new Curso("Programación I", 5, esteban.getNombre());
+        Curso curso1 = new Curso("Programacion I", esteban.getNombre());
         return curso1;
     }
 
@@ -65,20 +66,15 @@ public class App {
      * @return
      */
     public static Estudiante creacionEstudiante() {
-        Estudiante pepito = new Estudiante("Pepito", "Lopez", "109234", "58534721", "pepito@gmail.com", (byte) 4, 7, 8, 5);
+        Estudiante pepito = new Estudiante("Pepito", "Lopez", "109234", "58534721", "pepito@gmail.com", (byte) 4);
         return pepito;
-    }
-
-    public static String generarMensaje(UniversidadDelQuindio uni, Profesor profesor, ProgramaAcademico pAcademico, Curso curso, Estudiante estudiante) {
-        String mensaje = uni.toString() + profesor.toString() + pAcademico.toString() + curso.toString() + estudiante.toString();
-        return mensaje;
     }
 
     /**
      * Método para mostrar el mensaje final
      * @param mensaje
      */
-    public static void mostrarMensaje(String mensaje) {
-        System.out.println(mensaje);
+    public  static void mostrarMensaje(Curso curso) {
+        System.out.println(curso);
     }
 }

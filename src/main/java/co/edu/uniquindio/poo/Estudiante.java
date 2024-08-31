@@ -19,18 +19,13 @@ public class Estudiante {
      * @param correo
      * @param edad
      */
-    public Estudiante(String nombre, String apellido, String id, String telefono, String correo, byte edad,
-            double nota1,
-            double nota2, double nota3) {
+    public Estudiante(String nombre, String apellido, String id, String telefono, String correo, byte edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.id = id;
         this.telefono = telefono;
         this.correo = correo;
         this.edad = edad;
-        this.nota1 = nota1;
-        this.nota2 = nota2;
-        this.nota3 = nota3;
         validarNota(nota1);
         validarNota(nota2);
         validarNota(nota3);
@@ -119,6 +114,7 @@ public class Estudiante {
     public void setEdad(byte edad) {
         this.edad = edad;
     }
+
     /**
      * Metodo para calcular el promedio de las notas del estudiante introducidas en el contructor
      * @param nota1
